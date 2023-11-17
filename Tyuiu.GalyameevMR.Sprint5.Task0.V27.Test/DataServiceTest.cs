@@ -9,7 +9,7 @@ namespace Tyuiu.GalyameevMR.Sprint5.Task0.V27.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void CheckFile()
+        public void CheckFile() 
         {
             string path = @"C:\visual studio\Tyuiu.GalyameevMR.Sprint5\Tyuiu.GalyameevMR.Sprint5.Task0.V27\bin\Debug\OutPutFileTask0.txt";
             FileInfo fileInfo = new FileInfo(path);
