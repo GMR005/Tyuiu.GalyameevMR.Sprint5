@@ -12,7 +12,7 @@ namespace Tyuiu.GalyameevMR.Sprint5.Task3.V14.Test
         public void CheckFile()
         {
             string path = @"C:\visual studio\Tyuiu.GalyameevMR.Sprint5\Tyuiu.GalyameevMR.Sprint5.Task3.V27\bin\Debug\OutPutFileTask3.txt";
-            FileInfo fileInfo = new FileInfo(path);
+            FileInfo fileInfo = new FileInfo(path); 
             bool fileExists = fileInfo.Exists;
             bool wait = true;
             Assert.AreEqual(wait, fileExists);

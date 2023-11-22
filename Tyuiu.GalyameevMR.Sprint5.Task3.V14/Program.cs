@@ -9,7 +9,7 @@ namespace Tyuiu.GalyameevMR.Sprint5.Task3.V14
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) 
         {
             DataService DataService = new DataService();
             Console.WriteLine("****************************************************************");

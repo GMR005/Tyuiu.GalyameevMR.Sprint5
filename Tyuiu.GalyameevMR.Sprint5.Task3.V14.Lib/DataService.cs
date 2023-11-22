@@ -9,11 +9,11 @@ using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.GalyameevMR.Sprint5.Task3.V14.Lib
 {
     public class DataService : ISprint5Task3V14
-    {
+    { 
         public string SaveToFileTextData(int x)
         {
             string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask3.bin";
-            FileInfo fileInfo = new FileInfo(path);
+            FileInfo fileInfo = new FileInfo(path); 
             bool fileExists = fileInfo.Exists;
             if (fileExists)
             {
