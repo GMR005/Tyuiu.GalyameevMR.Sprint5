@@ -10,7 +10,7 @@ namespace Tyuiu.GalyameevMR.Sprint5.Task2.V9.Lib
 {
     public class DataService : ISprint5Task2V9
     {
-        public string SaveToFileTextData(int[,] matrix)
+        public string SaveToFileTextData(int[,] matrix) 
         {
             string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask2.txt";
             FileInfo fileInfo = new FileInfo(path);
