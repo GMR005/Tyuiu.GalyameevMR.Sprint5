@@ -12,16 +12,18 @@ namespace Tyuiu.GalyameevMR.Sprint5.Task2.V9.Lib
     {
         public string SaveToFileTextData(int[,] matrix)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask.csv";
+            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask1.txt";
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
+            int rows = matrix.GetUpperBound(0) + 1;
+            int columns = matrix.Length / rows;
             if (fileExists)
             {
                 File.Delete(path);
             };
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < matrix.GetLength(1); j++)
+                for (int j = 0; j < columns; j++)
                 {
                     if (matrix[i,j] % 2 != 0)
                     {
@@ -29,27 +31,27 @@ namespace Tyuiu.GalyameevMR.Sprint5.Task2.V9.Lib
                     }
                 }
             }
-            string res = "";
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            string str = "";
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < matrix.GetLength(1); i++)
+                for (int j = 0; j < columns; j++)
                 {
-                    if (j != matrix.GetLength(1) - 1)
+                    if (j != columns - 1)
                     {
-                        res += matrix[i, j] + ";";
+                        str = str + matrix[i, j] + ";";
                     }
                     else
                     {
-                        res += matrix[i, j];
+                        str = str + matrix[i, j];
                     }
                 }
-                if (i != matrix.GetLength(0) - 1)
+                if (i != rows - 1)
                 {
-                    File.AppendAllText(path, res + Environment.NewLine);
+                    File.AppendAllText(path, str + Environment.NewLine);
                 }
                 else
                 {
-                    File.AppendAllText(path, res);
+                    File.AppendAllText(path, str);
                 }
             }
             return path;
